@@ -1,0 +1,6 @@
+{
+  "name": "Collaborative manipulation corpus",
+  "tagline": "A Corpus of Natural Language Instructions for Collaborative Manipulation",
+  "body": "## Introduction.\r\nThis site presents a dataset of natural language instructions for object specification in manipulation scenarios. It is comprised of 1607 individual written instructions which were collected via online crowdsourcing. This dataset is particularly useful for researchers who work in natural language processing, human-robot interaction, and robotic tabletop manipulation. It provides a benchmark of image/instruction pairs to be used in system evaluations as well as uncovers inherent challenges in table-top object specification. \r\n\r\n\r\n## The dataset is published in International Journal of Robotics Research\r\nR. Scalise*, S. Li*, H. Admoni, S. Rosenthal, and S. Srinivasa ``Placeholder title for Natural Language Instructions for Collaborative Manipulation,'' *International Journal of Robotics Research*, in press. \r\n\r\n## Example code is provided for easy access via Python\r\n\r\n## Datasheet in CSV format\r\n\r\n\r\n\r\n## Contact\r\nRosario Scalise robo@cmu.edu\r\nShen Li shenli@cmu.edu\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
