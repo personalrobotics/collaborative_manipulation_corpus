@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict
 
-source = '../data/forward_study_per_sentence_user.csv'
+source = '../data/NLICorpusData.csv'
 numEntries = 1583
 table_LoD = [None for i in range(numEntries)]
 table_DoL = defaultdict(lambda: [None] * numEntries)
@@ -18,7 +18,7 @@ def initDataStructs():
 
 
     keys available:
-        Description:            Given by participant as response to prompt
+        Instruction:            Given by participant as response to prompt
         Index:                  Corresponds to individual instruction
         Scenario:               Configuration by image and variation
         AgentType:              Agent participant is instructing
@@ -30,14 +30,14 @@ def initDataStructs():
         Age:                    Age of participant
         Gender:                 Gender of participant
         Occupation:             Occupation of participant
-        ComputerUsage:          Hrs/wk participant uses a computer
+        ComputerUsage:          Duration participant uses a computer per week
         DominantHand:           Dominant hand of participant
-        EnglishAsFirst:         Participant’s first language
-        ExpWithRobots:          Particpant exp. with robots
-        ExpWithRCCars:          Participant exp. with RC cars
-        ExpWithFPS:             Exp. with first-person-shooter video games
-        ExpWithRTS:             Exp. with real-time-strategy video games
-        ExpWithRobotComments:   Comments on exp. with robots
+        EnglishAsFirst:         Participant's first language
+        ExpWithRobots:          Participant experience with robots
+        ExpWithRCCars:          Participant experience with RC cars
+        ExpWithFPS:             Participant experience with first-person shooter video games
+        ExpWithRTS:             Participant experience with real-time strategy video games
+        ExpWithRobotComments:   Comments on experience with robots
         InternalUserID:         Particpant ID in study 1 unaffiliated with Amazon ID
     """
 
@@ -57,10 +57,10 @@ print table_LoD[77]
 
 # entire data entry from 77 to 79
 print table_LoD[77:80]
-print table_LoD[77]['Description']
-print table_DoL['Description']
-print table_DoL['Description'][77]
+print table_LoD[77]['Instruction']
+print table_DoL['Instruction']
+print table_DoL['Instruction'][77]
 
 # description from entry 77 to 79
-print table_DoL['Description'][77:80]
+print table_DoL['Instruction'][77:80]
 
