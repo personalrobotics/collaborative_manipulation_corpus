@@ -11,22 +11,24 @@ def initDataStructs():
     Opens and parses CSV, creates two data structures, and populates them.
     Creates 'List of Dictionaries' and 'Dictionary of Lists' for ease of access.
 
-    Example for LoD: table_LoD[77] will access the dictionary of fields for the instruction which corresponds to Index field 77.
+    Example for LoD: table_LoD[277] will access the dictionary of fields for the instruction which corresponds to Index field 277.
 
-    Examples for DoL: table_DoL['Description'] will access a list of all descriptions.
-                      table_DoL['Description'][77] will access the Description which corresponds to Index field 77.
+    Examples for DoL: table_DoL['Instruction'] will access a list of all instructions.
+                      table_DoL['Instruction'][277] will access the instruction which corresponds to Index field 277.
 
 
-    keys available:
+    Keys Available:
+    Per Instruction:
         Instruction:            Given by participant as response to prompt
         Index:                  Corresponds to individual instruction
-        Scenario:               Configuration by image and variation
+        Scenario:               Configuration by image and variant of image
         AgentType:              Agent participant is instructing
         Difficulty:             Rating for a scenario given by participant
         TimeToComplete:         Duration participant took to create instruction
-        Strategy:               Comments on strategy for used
-        Challenging:            Comments on overall study difficulty
-        GeneralComments:        Comments on general on overall study
+    Per Particpant (multiple instructions will have same entries for these fields):
+        Strategy:               Participant comments on strategy used in answering prompt
+        Challenging:            Participant comments on overall study difficulty
+        GeneralComments:        Participant comments in general on overall study
         Age:                    Age of participant
         Gender:                 Gender of participant
         Occupation:             Occupation of participant
@@ -37,7 +39,7 @@ def initDataStructs():
         ExpWithRCCars:          Participant experience with RC cars
         ExpWithFPS:             Participant experience with first-person shooter video games
         ExpWithRTS:             Participant experience with real-time strategy video games
-        ExpWithRobotComments:   Comments on experience with robots
+        ExpWithRobotComments:   Participant comments on experience with robots
         InternalUserID:         Particpant ID in study 1 unaffiliated with Amazon ID
     """
 
@@ -50,17 +52,23 @@ def initDataStructs():
 
 initDataStructs()
 
+# note these lengths are the number of Instructions and should be equivalent
 print len(table_DoL['Index'])
 print len(table_LoD)
 
-print table_LoD[77]
+# table entry for instruction @ Index #277
+print table_LoD[277]
 
-# entire data entry from 77 to 79
-print table_LoD[77:80]
-print table_LoD[77]['Instruction']
+# table entries for instructions from Index #277 to #279
+print table_LoD[277:280]
+
+# just the instruction @ Index #277
+print table_LoD[277]['Instruction']
+print table_DoL['Instruction'][277]
+
+# all entries in the Instruction field 
 print table_DoL['Instruction']
-print table_DoL['Instruction'][77]
 
-# description from entry 77 to 79
-print table_DoL['Instruction'][77:80]
+# instructions from Index #277 to #279 
+print table_DoL['Instruction'][277:280]
 
