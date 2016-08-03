@@ -30,7 +30,7 @@ Keys Available:
 Per Instruction:
     Instruction             Taken from NLI Corpus for evaluation by separate participant
     Index                   Corresponds to individual instruction
-    Scenario                Configuration by image and image variant 
+    Scenario                Configuration by image and variation 
     NumOfWords              The number of words contained in an instruction
     TargetBlockId           Corresponds to the target block of an instruction
     ClickedBlockId          Corresponds to the block participant finally selected
@@ -75,7 +75,12 @@ print table_DoL['Instruction'][277:280]
 2. In evaluationDataAvg
 Keys Available:
 Per Instruction:
+    Instruction             Instruction being evaluated
+    Index                   Corresponds to individual instruction
+    Scenario:               Configuration by image and varation 
     ClickedBlockIdList      Corresponds to the blocks multiple participants respectively selected
+    TargetBlockID           Corresponds to the target block of an instruction
+    NumOfWords              The number of words contained in an instruction
     AccuracyAvg             Average correctness among multiple participants
     TimeToCompleteAvg       Average duration among multiple participants
     InternalUserIDList      Multiple participant IDs unaffiliated with Amazon ID
@@ -101,6 +106,8 @@ print table_DoL['Instruction']
 
 print table_DoL['Instruction'][277:280]
 
+import ipdb
+ipdb.set_trace()
 
 
 

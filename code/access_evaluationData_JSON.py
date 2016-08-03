@@ -41,7 +41,8 @@ print data['U1@S282']['Instruction']
 Keys Available:
 Per Instruction:
     Instruction             Instruction being evaluated
-    Scenario:               Image block configuration and variant of image
+    Index                   Corresponds to individual instruction
+    Scenario:               Configuration by image and variation 
     ClickedBlockIdList      Corresponds to the blocks multiple participants respectively selected
     TargetBlockID           Corresponds to the target block of an instruction
     NumOfWords              The number of words contained in an instruction
