@@ -1,4 +1,4 @@
-Description,Index,Scenario,NumOfWords,TargetBlockId,ClickedBlockIdList,Accuracy(AvgOn10),TimeToComplete(AvgOn10),InternalUserIDList
+Instruction,Index,Scenario,NumOfWords,TargetBlockId,ClickedBlockIdList,AccuracyAvg,TimeToCompleteAvg,InternalUserIDList
 Pick the green block that is right between the cluster of green blocks,344,Configuration_6_v1.png,13,12,"[8, 12, 12, 12, 12, 12, 12, 12, 12, 12]",0.9,14.8419459,"[491, 451, 18, 369, 610, 309, 260, 168, 538, 130]"
 Pick the blue block that is right above the orange block,345,Configuration_2_v2.png,11,10,"[10, 10, 5, 10, 10, 10, 10, 10, 5, 10]",0.8,11.5855058,"[513, 619, 319, 584, 97, 466, 143, 224, 603, 379]"
 Pick the orange block that is closest to you,347,Configuration_10_v2.png,9,6,"[6, 6, 6, 6, 6, 15, 6, 6, 6, 6]",0.9,5.9268396,"[229, 324, 102, 610, 471, 518, 275, 589, 384, 431]"
