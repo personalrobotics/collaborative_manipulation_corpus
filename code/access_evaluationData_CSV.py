@@ -10,10 +10,10 @@ def initDataStructs():
     Opens and parses CSV, creates two data structures, and populates them.
     Creates 'List of Dictionaries' and 'Dictionary of Lists' for ease of access.
 
-    Example for LoD: table_LoD[77] will access the dictionary of fields for the instruction which corresponds to Index field 77.
+    Example for LoD: table_LoD[277] will access the dictionary of fields for the instruction which corresponds to Index field 277.
 
-    Examples for DoL: table_DoL['Description'] will access a list of all descriptions.
-                      table_DoL['Description'][77] will access the Description which corresponds to Index field 77.
+    Examples for DoL: table_DoL['Instruction'] will access a list of all descriptions.
+                      table_DoL['Instruction'][77] will access the Description which corresponds to Index field 77.
     """
 
     with open(source) as csvfile:
@@ -26,15 +26,17 @@ def initDataStructs():
 
 """
 1. In evaluationData
-keys available:
-    Instruction             Taken from Instruction Corpus and to be evaluated by participant
+Keys Available:
+Per Instruction:
+    Instruction             Taken from NLI Corpus for evaluation by separate participant
     Index                   Corresponds to individual instruction
-    Scenario                Configuration by image and variation
+    Scenario                Configuration by image and variation 
     NumOfWords              The number of words contained in an instruction
     TargetBlockId           Corresponds to the target block of an instruction
-    ClickedBlockId          Corresponds to the block participant eventu- ally selected
-    Correctness             Whether participant chose the target block
+    ClickedBlockId          Corresponds to the block participant finally selected
+    Correctness             Whether participant chose the correct target block 
     TimeToComplete          Duration participant took to evaluate an instruction
+Per Particpant:
     DiffcultyComm           Comment on the general difficulty of overall task.
     ObsHardComm             Observation on instructions difficult to interpret
     ObsEasyComm             Observation on instructions easy to interpret
@@ -43,48 +45,71 @@ keys available:
 source = '../data/evaluationData.csv'
 initDataStructs()
 
+# note these lengths are the number of NLI from the original corpus and should be equivalent
+# there will be 'holes' in these data structures where no evaluation data was collected due to downsampling from the original set to a cleaner less noisy subset
 print len(table_DoL['Index'])
 print len(table_LoD)
 
-print table_LoD[77]
+# an example of an entry with no evaluation data
+print table_LoD[133]
 
-# entire data entry from 77 to 79
-print table_LoD[77:80]
-print table_LoD[77]['Instruction']
+# table entry for instruction @ Index #277
+print table_LoD[277]
+
+# table entries for instructions from Index #277 to #279
+print table_LoD[277:280]
+
+# just the instruction @ Index #277
+print table_LoD[277]['Instruction']
+print table_DoL['Instruction'][277]
+
+# all entries in the Instruction field 
 print table_DoL['Instruction']
-print table_DoL['Instruction'][77]
 
-# description from entry 77 to 79
-print table_DoL['Instruction'][77:80]
+# instructions from Index #277 to #279 
+print table_DoL['Instruction'][277:280]
 
 
 
 """
 2. In evaluationDataAvg
-keys available:
+Keys Available:
+Per Instruction:
+    Instruction             Instruction being evaluated
+    Index                   Corresponds to individual instruction
+    Scenario:               Configuration by image and varation 
     ClickedBlockIdList      Corresponds to the blocks multiple participants respectively selected
-    AccuracyAvg             Averaget correctness among multiple participants
+    TargetBlockID           Corresponds to the target block of an instruction
+    NumOfWords              The number of words contained in an instruction
+    AccuracyAvg             Average correctness among multiple participants
     TimeToCompleteAvg       Average duration among multiple participants
     InternalUserIDList      Multiple participant IDs unaffiliated with Amazon ID
+    Ambiguity               Manually coded data corresponding to the number of possible target blocks an instruction could reference given the stimulus scenario
+    Perspective             Manually coded data corresponding to the perspective an instruction uses 
 """
 source = '../data/evaluationDataAvg.csv'
 initDataStructs()
 
+
 print len(table_DoL['Index'])
 print len(table_LoD)
 
-print table_LoD[77]
+# an example of an entry with no evaluation data
+print table_LoD[133]
 
-# entire data entry from 77 to 79
-print table_LoD[77:80]
-print table_LoD[77]['Instruction']
+print table_LoD[277]
+
+print table_LoD[277:280]
+
+print table_LoD[277]['Instruction']
+print table_DoL['Instruction'][277]
+
 print table_DoL['Instruction']
-print table_DoL['Instruction'][77]
 
-# description from entry 77 to 79
-print table_DoL['Instruction'][77:80]
+print table_DoL['Instruction'][277:280]
 
-
+import ipdb
+ipdb.set_trace()
 
 
 
