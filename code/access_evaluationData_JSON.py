@@ -49,6 +49,8 @@ Per Instruction:
     AccuracyAvg             Averaget correctness among multiple participants
     TimeToCompleteAvg       Average duration among multiple participants
     InternalUserIDList      Multiple participant IDs unaffiliated with Amazon ID
+    Ambiguity               Manually coded data corresponding to the number of possible target blocks an instruction could reference given the stimulus scenario
+    Perspective             Manually coded data corresponding to the perspective an instruction uses 
 
 """
 source = '../data/evaluationDataAvg.json'
