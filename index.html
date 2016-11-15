@@ -13,9 +13,9 @@
     <section class="page-header">
       <h1 class="project-name">Collaborative Manipulation Corpus</h1>
       <h2 class="project-tagline">A Corpus of Natural Language Instructions for Human-Robot Collaborative Manipulation</h2>
-      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus" class="btn">View on GitHub</a>
-      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus" class="btn" target="_blank">View on GitHub</a>
+      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/zipball/master" class="btn" target="_blank">Download .zip</a>
+      <a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/tarball/master" class="btn"target="_blank">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -41,6 +41,53 @@
 <li><p><a href="./data/NLICorpusData_1400.csv" target="_blank">Downsampled Data in CSV</a></p>
 <p>(We downsampled the data from 1582 to 1400 and use the 1400 instructions in the evaluation study)</p></li>
 <li><p><a href="./code/access_NLICorpusData_CSV.py" target="_blank">Accessing code in Python</a></p></li>
+<li><p>Data example</p></li>
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Index</th>
+    <th>Scenario</th>
+    <!-- <th>AgentType</th>
+    <th>Difficulty</th>
+    <th>TimeToComplete</th>
+    <th>...</th> -->
+  </tr>
+  <tr>
+    <td>Pick up the yellow cube.</td>
+    <td>1341</td>
+    <td>Configuration_1_v1.png</td>
+    <!-- <td>human</td>
+    <td>5</td>
+    <td>0:00:16</td>
+    <td>...</td> -->
+  </tr>
+  <tr>
+    <!-- <th>Description</th>
+    <th>Index</th>
+    <th>Scenario</th> -->
+    <th>AgentType</th>
+    <th>Difficulty</th>
+    <th>TimeToComplete</th>
+    <td>...</td>
+  </tr>
+  <tr>
+    <!-- <td>Pick up the yellow cube.</td>
+    <td>1341</td>
+    <td>Configuration_1_v1.png</td> -->
+    <td>human</td>
+    <td>5</td>
+    <td>0:00:16</td>
+    <td>...</td>
+  </tr>
+</table>
+<ul>
+  <li><p>Description or Instruction: The participant gave it to describe the indicated block</p></li>
+  <li><p>Index: This is the No. 1341 description</p></li>
+  <li><p>Scenario: In study 1, we show people either Configuration_01_v1.png or Configuration_01_v2.png. Here it is Configuration_01_v1.png, which you can access at <a href="./study1_images_with_red_arrows/Configuration_01_v1.png" target="_blank">Configuration_01_v1.png</a></p></li>
+  <li><p>AgentType: The participant is instructing a <i>human</i> instead of a <i>robot</i></p></li>
+  <li><p>Difficulty: The participant rated this scenario as 5 (most difficult)</p></li>
+  <li><p>TimeToComplete: The participant spent 16 seconds to generate this description</p></li>
+</ul>
 </ul>
 </li>
 <li>
@@ -51,13 +98,90 @@
 <li><p><a href="./data/evaluationData.csv" target="_blank">Full Data in CSV</a></p></li>
 <li><p><a href="./data/evaluationDataAvg.json" target="_blank">Average Data in JSON</a></p></li>
 <li><p><a href="./data/evaluationDataAvg.csv" target="_blank">Average Data in CSV</a></p></li>
-<li>
-<p><a href="./code/access_evaluationData_JSON.py" target="_blank">Python code to access JSON data</a></p>
-<p><a href="./code/access_evaluationData_CSV.py" target="_blank">Python code to access CSV data</a></p>
-
+<li><p><a href="./code/access_evaluationData_JSON.py" target="_blank">Python code to access JSON data</a></p></li>
+<li><p><a href="./code/access_evaluationData_CSV.py" target="_blank">Python code to access CSV data</a></p></li>
 <ul>
 <li>Note: in accessing code of study 2, <code>r_target_block_index</code> is referring to the index of the target block. The index of all the blocks and the indices of target blocks in both versions of each scenario on the tabletop are annotated in <a href="./docs/images_code.pdf" target="_blank">images_code.pdf</a>
 </li>
+</ul>
+<li><p>Data example</p></li>
+<table>
+  <tr>
+    <th>Instruction</th>
+    <th>Index</th>
+    <th>Scenario</th>
+    <!-- <th>NumOfWords</th> -->
+    <!-- <th>TargetBlockId</th> -->
+    <!-- <th>ClickedBlockId</th> -->
+    <!-- <th>Correctness</th> -->
+    <!-- <th>TimeToComplete</th> -->
+    <!-- <th>...</th> -->
+  </tr>
+  <tr>
+    <td>Pick up the yellow cube.</td>
+    <td>1341</td>
+    <td>Configuration_1_v1.png</td>
+    <!-- <td>5</td> -->
+    <!-- <td>1</td> -->
+    <!-- <td>1</td> -->
+    <!-- <td>1</td> -->
+    <!-- <td>3.593606</td> -->
+    <!-- <td>...</td> -->
+  </tr>
+  <tr>
+    <!-- <th>Instruction</th> -->
+    <!-- <th>Index</th> -->
+    <!-- <th>Scenario</th> -->
+    <th>NumOfWords</th>
+    <th>TargetBlockId</th>
+    <th>ClickedBlockId</th>
+    <!-- <th>Correctness</th> -->
+    <!-- <th>TimeToComplete</th> -->
+    <!-- <th>...</th> -->
+  </tr>
+  <tr>
+    <!-- <td>Pick up the yellow cube.</td> -->
+    <!-- <td>1341</td> -->
+    <!-- <td>Configuration_1_v1.png</td> -->
+    <td>5</td>
+    <td>1</td>
+    <td>1</td>
+    <!-- <td>1</td> -->
+    <!-- <td>3.593606</td> -->
+    <!-- <td>...</td> -->
+  </tr>
+  <tr>
+    <!-- <th>Instruction</th> -->
+    <!-- <th>Index</th> -->
+    <!-- <th>Scenario</th> -->
+    <!-- <th>NumOfWords</th> -->
+    <!-- <th>TargetBlockId</th> -->
+    <!-- <th>ClickedBlockId</th> -->
+    <th>Correctness</th>
+    <th>TimeToComplete</th>
+    <th>...</th>
+  </tr>
+  <tr>
+    <!-- <td>Pick up the yellow cube.</td> -->
+    <!-- <td>1341</td> -->
+    <!-- <td>Configuration_1_v1.png</td> -->
+    <!-- <td>5</td> -->
+    <!-- <td>1</td> -->
+    <!-- <td>1</td> -->
+    <td>1</td>
+    <td>3.593606</td>
+    <td>...</td>
+  </tr>
+</table>
+<ul>
+  <li><p>Instruction: The participant looked for the indicated block based on this instruction</p></li>
+  <li><p>Index: This is the No. 1341 description</p></li>
+  <li><p>Scenario: In study 2, we don't distinguish Configuration_01_v1.png or Configuration_01_v2.png. So you can access this image at <a href="./study2_images_without_red_arrows/Configuration_01.png" target="_blank">Configuration_01.png</a></p></li>
+  <li><p>NumOfWords: Number of words within this instruction</p></li>
+  <li><p>TargetBlockId: You can find out the target block by referring to <a href="./docs/images_code.pdf" target="_blank">images_code.pdf</a> Page 1. You can find the block indicated by '1'</p></li>
+  <li><p>ClickedBlockId: You can find out the block selected by the participant by referring to <a href="./docs/images_code.pdf" target="_blank">images_code.pdf</a> Page 1. You can find the block indicated by '1'</p></li>
+  <li><p>Correctness: The participant successfully select the target block (1 if right, 0 if wrong)</p></li>
+  <li><p>TimeToComplete: The participant spent 3.593606 seconds to generate this description</p></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +193,7 @@
 
 <ol>
 <li>
-<p><a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/tree/master/study1_images_with_red_arrows" target="_blank">The stimulus images used in Study 1</a></p>
+<p><a href="./study1_images_with_red_arrows" target="_blank">The stimulus images used in Study 1</a></p>
 
 <ul>
 <li><p>"Configuration_example_page.png" is specifically used in the example page of the online Mechanical Turk study.</p></li>
@@ -82,7 +206,7 @@
 </ul>
 </li>
 <li>
-<p><a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/tree/master/study2_images_without_red_arrows" target="_blank">The stimulus images used in Study 2</a></p>
+<p><a href="./study2_images_without_red_arrows" target="_blank">The stimulus images used in Study 2</a></p>
 
 <ul>
 <li><p>It contains 1 image specifically used in the example page and 14 different images as the actual stimuli.</p></li>
@@ -131,7 +255,7 @@
 <h3>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
     <p>Source code is provided under the 
-        <a href="http://opensource.org/licenses/MIT">MIT License</a> and the .csv  data is available 
+        <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> and the .csv  data is available 
        under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license. 
     </p>     
 
@@ -139,10 +263,10 @@
 
       <footer class="site-footer">
   
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-        <span class="site-footer-owner"><a href="https://github.com/personalrobotics/collaborative_manipulation_corpus">Collaborative Manipulation Corpus</a> is maintained by <a href="https://github.com/personalrobotics">personalrobotics</a>.</span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        <span class="site-footer-owner"><a href="https://github.com/personalrobotics/collaborative_manipulation_corpus/tree/gh-pages"target="_blank">Collaborative Manipulation Corpus</a> is maintained by <a href="https://github.com/personalrobotics" target="_blank">personalrobotics</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com" target="_blank">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme" target="_blank">Cayman theme</a> by <a href="https://twitter.com/jasonlong" target="_blank">Jason Long</a>.</span>
       </footer>
 
     </section>
