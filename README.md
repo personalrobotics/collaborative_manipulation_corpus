@@ -9,9 +9,9 @@ This site presents a dataset of natural language instructions for object specifi
 # 1. Primary Dataset: Natural Language Instructions Corpus
 ## Sample data
 
-| Description | Index | Scenario | ...
+| Description | Index | Scenario | ... |
 |--------------------------|-------|------------------------|
-| Pick up the yellow cube. | 1341 | Configuration\_1\_v1.png | ...
+| Pick up the yellow cube. | 1341 | Configuration\_1\_v1.png | ... |
 
 | AgentType | Difficulty | TimeToComplete | ... |
 |--------------------------|-------|------------------------|---|
