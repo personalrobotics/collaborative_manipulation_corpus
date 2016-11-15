@@ -8,6 +8,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style>
+        /* SCROLL TABLE ESSENTIALS (+ SOME ADDITIONAL CSS): */
+        div#scrollTableContainer {
+            width: 617px;
+            margin: 40px; /* just for presentation purposes */
+            border: 1px solid black;
+        }
+    </style>
   </head>
   <body>
     <section class="page-header">
@@ -105,6 +113,88 @@
 </li>
 </ul>
 <li><p>Data example</p></li>
+ <p id="touchDeviceText">This table is scrollable</p>
+    <div id="scrollTableContainer">
+        <div id="tHeadContainer">
+            <table id="tHead">
+                <tr>
+                    <td>Name</td>
+                    <td>Operator</td>
+                    <td>Began operation</td>
+                    <td>Tonnage</td>
+                    <td>Status</td>
+                </tr>
+            </table>
+        </div><!-- tHeadContainer -->
+        <div id="tBodyContainer">
+            <table id="tBody">
+                <tr>
+                    <td>Seabourne Sun</td>
+                    <td>Seabourn Cruise Line</td>
+                    <td>1988</td>
+                    <td>?</td>
+                    <td>Ended service in 2002, currently operating as Prinsendam</td>
+                </tr>
+                <tr>
+                    <td>Adventures of the Seas</td>
+                    <td>Royal Caribbean International</td>
+                    <td>2001</td>
+                    <td>138,000</td>
+                    <td>Operating</td>
+                </tr>
+                <tr>
+                    <td>Oceanic Independence</td>
+                    <td>American Hawaiian Cruises / American Global Line</td>
+                    <td>1974</td>
+                    <td>23,719</td>
+                    <td>Named formerly (1951-1974) and subsequently renamed (1982-2006) the Independence, renamed the Oceanic (2006), sold for scrap in 2008 but remains in mothballs</td>
+                </tr>
+                <tr>
+                    <td>Cunard Ambassador</td>
+                    <td>Cunard Line</td>
+                    <td>1972</td>
+                    <td>14,160</td>
+                    <td>Burnt 1974, rebuilt into a livestock carrier, renamed Linda Clausen, later Procyon, Raslan. Scrapped 1984 after a second fire.</td>
+                </tr>
+                <tr>
+                    <td>Aegean Beauty</td>
+                    <td>Voyages to Antiquity</td>
+                    <td>1973</td>
+                    <td>11,563</td>
+                    <td>Formerly Aegean Dolphin and Aegean I. Operating</td>
+                </tr>
+                <tr>
+                    <td>Serenade of the Seas</td>
+                    <td>Royal Caribbean International</td>
+                    <td>2003</td>
+                    <td>90,090</td>
+                    <td>Operating</td>
+                </tr>
+                <tr>
+                    <td>Queen Elizabeth 2</td>
+                    <td>Cunard Line</td>
+                    <td>1969</td>
+                    <td>70,327</td>
+                    <td>Left fleet in November 2008</td>
+                </tr>
+                <tr>
+                    <td>National Geographic Endeavour</td>
+                    <td>Lindblad Expeditions</td>
+                    <td>1996</td>
+                    <td></td>
+                    <td>Operating, also known as Endeavour</td>
+                </tr>
+                <tr class="lastRow">
+                    <td>Liberty of the Seas</td>
+                    <td>Royal Caribbean International</td>
+                    <td>2007</td>
+                    <td>154,407</td>
+                    <td>Operating</td>
+                </tr>
+            </table>
+        </div><!-- tBodyContainer -->
+    </div><!-- scrollTableContainer -->   
+
 <table>
   <tr>
     <th>Instruction</th>
