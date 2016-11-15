@@ -2,14 +2,16 @@
 A Corpus of Natural Language Instructions for Collaborative Manipulation
 
 # Overview 
-This site presents a dataset of natural language instructions for object specification in manipulation scenarios. It is comprised of 1582 individual written instructions which were collected via online crowdsourcing. This dataset is particularly useful for researchers who work in natural language processing, human-robot interaction, and robotic tabletop manipulation. It provides a benchmark of image/instruction pairs to be used in system evaluations as well as uncovers inherent challenges in table-top object specification. 
+This site presents a dataset of natural language instructions for object specification in manipulation scenarios. It is comprised of 1582 individual written instructions which were collected via online crowdsourcing. Each of these instructions was elicited from one of 28 included scenario images. This dataset is particularly useful for researchers who work in natural language processing, human-robot interaction, and robotic manipulation. In addition to serving as a rich corpus of domain-specific language, it provides a benchmark of image/instruction pairs to be used in system evaluations as well as uncovers inherent challenges in tabletop object specification. Example code is provided for easy access via Python.  
+
+
 
 # 1. Primary Dataset: Natural Language Instructions Corpus
 ## Sample data
 
-| Description | Index | Scenario |
+| Description | Index | Scenario | ...
 |--------------------------|-------|------------------------|
-| Pick up the yellow cube. | 1341 | Configuration\_1\_v1.png |
+| Pick up the yellow cube. | 1341 | Configuration\_1\_v1.png | ...
 
 | AgentType | Difficulty | TimeToComplete | ... |
 |--------------------------|-------|------------------------|---|
