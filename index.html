@@ -44,7 +44,7 @@
 <li><p><a href="./data/NLICorpusData_1400.csv" target="_blank">Downsampled Data in CSV</a></p>
 <p>(We downsampled the data from 1582 to 1400 and use the 1400 instructions in the evaluation study)</p></li>
 <li><p><a href="./code/access_NLICorpusData_CSV.py" target="_blank">Accessing code in Python</a></p></li>
-<li><p>Example of one row from the table:</p></li>
+<li><p>Example of one row from the main instruction dataset table:</p></li>
 <br>
 <table style="height:100px; width:750px; overflow-x:scroll ; overflow-y:hidden ; padding-bottom:10px;">
   <tr>
@@ -120,6 +120,9 @@
 </li>
 </ul>
 <br>
+<li><p>Example of one row from the evaluation data table:</p>
+</li>
+<br>
 <table style="height:100px; width:750px; overflow-x:scroll ; overflow-y:hidden ; padding-bottom:10px; n-th">
   <tr>
     <th>Instruction</th>
@@ -180,7 +183,7 @@
   <li><p>Index: This is Instruction ID #1341 - it is consistent across all data files</p></li>
   <li><p>Scenario: In the evaluation study, there was no distinction between versions of stimulus images e.g. 'v0 or v1'. Configuration_01_v1.png or Configuration_01_v2.png would both correspond to <a href="./study2_images_without_red_arrows/Configuration_01.png" target="_blank">Configuration_01.png</a> as they are the same when the red indication arrow is removed.</p></li>
   <li><p>NumOfWords: Number of words within this instruction</p></li>
-  <li><p>TargetBlockId: A number assigned to each block within an image as defined in<a href="./docs/images_code.pdf" target="_blank">images_code.pdf</a> Page 1. The real target block in the original source images was block '1'.</p></li>
+  <li><p>TargetBlockId: A number assigned to each block within an image as defined in <a href="./docs/images_code.pdf" target="_blank">images_code.pdf</a> Page 1. The real target block in the original source images was block '1'.</p></li>
   <li><p>ClickedBlockId: A number which comes from the same definition as the TargetBlockId. This number refers to the block that was selected by the evaluating participant.</p></li>
   <li><p>Correctness: This participant successfully selected the target block (1 if correct, 0 if wrong).</p></li>
   <li><p>TimeToComplete: The participant spent ~3.6 seconds evaluating this instruction.</p></li>
