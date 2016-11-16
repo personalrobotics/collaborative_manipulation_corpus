@@ -1,3 +1,4 @@
+<h3>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
 
 <p>This web page supports a dataset of natural language instructions for object specification in manipulation scenarios. It is comprised of 1582 individual written instructions which were collected via online crowdsourcing. Each of these instructions was elicited from one of 28 included scenario images. This dataset is particularly useful for researchers who work in natural language processing, human-robot interaction, and robotic tabletop manipulation. In addition to serving as a rich corpus of domain specific language, it provides a benchmark of image/instruction pairs to be used in system evaluations as well as uncovers inherent challenges in tabletop object specification. </p>
